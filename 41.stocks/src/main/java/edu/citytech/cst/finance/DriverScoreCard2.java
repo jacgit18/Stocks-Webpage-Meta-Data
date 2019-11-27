@@ -12,8 +12,7 @@ import edu.citytech.cst.service.ScoreCardService;
 public class DriverScoreCard2 {
 
 	public static void main(String[] args) {
-		//
-
+		
 		ScoreCardService sc = new ScoreCardService();
 		Document doc = sc.getDocument("/home/jac/Stocks/MID Dividend Scorecard.html");
 
