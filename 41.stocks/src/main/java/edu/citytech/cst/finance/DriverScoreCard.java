@@ -19,11 +19,15 @@ public class DriverScoreCard {
 			metas.forEach(System.out::println); // printing out meta tags
 			
 			String name = metas.select("meta[itemprop=name]").first().attr("content");
-			System.out.println("--------------------------------------");
-			System.out.println(name);
-			
 			String symbol = metas.select("meta[itemprop=tickerSymbol]").first().attr("content");
-			System.out.println(symbol);
+
+			System.out.println("--------------------------------------");
+			System.out.println("Symbol: " + symbol);
+			System.out.println(name);
+
+			String mymoney = doc.select("div#symbol_last_trade").first().text(); // selector for css
+			System.out.println(mymoney);
+			
 			
 			String exchange = metas.select("meta[itemprop=exchange]").first().attr("content");
 			System.out.println(exchange);
@@ -32,9 +36,13 @@ public class DriverScoreCard {
 			System.out.println(Price);
 			
 			
-			String mymoney = doc.select("div#symbol_last_trade").first().text(); // selector for css
-			System.out.println(mymoney);
-
+			
+			
+			
+			//<td id="dividendsPayoutRatio" data-value="59.83%">59.83%</td>
+			String ePayoutRatio = doc.select("td#dividendsPayoutRatio").first().text(); //# for tag id
+			System.out.println(ePayoutRatio);
+			
 			
 		} catch (IOException e) {
 			e.printStackTrace();
