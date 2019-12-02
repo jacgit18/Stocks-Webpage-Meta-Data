@@ -28,7 +28,8 @@ public class DriverScoreCard2 {
 		map.put(DIVIDEND_YEILD, .0727f);
 		
 		Map <EDividendSummary, Float> dividendSummary = sc.getDividendSummary();
-		//
+		System.out.println(dividendSummary);
+		
 
 
 	}
