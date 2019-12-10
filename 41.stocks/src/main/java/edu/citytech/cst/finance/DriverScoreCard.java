@@ -11,7 +11,9 @@ import org.jsoup.select.Elements;
 public class DriverScoreCard {
 
 	public static void main(String[] args) {
-		File input = new File("/home/jac/Stocks/MID Dividend Scorecard.html");
+//		File input = new File("/home/jac/Stocks/MID Dividend Scorecard.html");
+		File input = new File("/data/Stocks/MID Dividend Scorecard.html");
+
 		try {
 			Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
 			
