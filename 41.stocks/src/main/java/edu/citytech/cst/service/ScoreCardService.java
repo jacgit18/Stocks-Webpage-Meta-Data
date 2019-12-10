@@ -17,9 +17,12 @@ public class ScoreCardService {
 	public Document getDocument(String filename) {
 		
 		// crtl + shift + o  to get rid of elements not used like imports
-		File input = new File("/home/jac/Stocks/MID Dividend Scorecard.html");
+//		File input = new File("/home/jac/Stocks/MID Dividend Scorecard.html");
+		File input = new File("/data/Stocks/MID Dividend Scorecard.html");
+
 		try {
 			 doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
+			 
 			
 			return doc;
 			
