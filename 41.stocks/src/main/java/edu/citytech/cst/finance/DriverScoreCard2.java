@@ -14,7 +14,9 @@ public class DriverScoreCard2 {
 	public static void main(String[] args) {
 		
 		ScoreCardService sc = new ScoreCardService();
-		Document doc = sc.getDocument("/home/jac/Stocks/MID Dividend Scorecard.html");
+//		Document doc = sc.getDocument("/home/jac/Stocks/MID Dividend Scorecard.html");
+		Document doc = sc.getDocument("/data/Stocks/MID Dividend Scorecard.html");
+
 
 		String name = sc.getStockName();
 		System.out.println("Name: " + name);
